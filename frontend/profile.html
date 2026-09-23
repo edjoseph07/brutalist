@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+    <header class="site-header">
+        <a href="profile.html" class="site-logo">BRUTALIST</a>
+    </header>
+
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div>
+                <a class="sidebar-brand" href="profile.html">BRUTALIST</a>
+                <p class="sidebar-caption">Member area</p>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Main navigation">
+                <button type="button" class="sidebar-link is-active" data-panel="usersPanel">
+                    Users
+                </button>
+                <button type="button" class="sidebar-link" data-panel="aboutPanel">
+                    About
+                </button>
+            </nav>
+
+            <button type="button" id="logoutBtn" class="logout-button">Log out</button>
+        </aside>
+
+        <main class="content-area">
+            <section id="usersPanel" class="page-panel" aria-labelledby="usersTitle">
+                <div class="page-heading">
+                    <p class="eyebrow">Directory</p>
+                    <h1 id="usersTitle">Users</h1>
+                    <p>Everyone who has signed up for this application.</p>
+                </div>
+                <p id="usersStatus" class="users-status" aria-live="polite">Loading users…</p>
+                <div id="usersList" class="users-list"></div>
+                <button type="button" id="loadMoreButton" class="load-more-button" hidden>Load more users</button>
+            </section>
+
+            <section id="aboutPanel" class="page-panel" aria-labelledby="aboutTitle" hidden>
+                <div class="page-heading">
+                    <p class="eyebrow">About</p>
+                    <h1 id="aboutTitle">Member directory</h1>
+                    <p>This area is available after signing in. User passwords are never displayed.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Brutalist. All rights reserved.</p>
+    </footer>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>
